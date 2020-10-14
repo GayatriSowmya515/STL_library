@@ -3,6 +3,7 @@
 #include <set>
 #include <map>
 #include <algorithm>
+#include <unordered_map>
 //#include <bits/stdc++.h>
 #define rep(i,n) for(int i=0;i<(n);i++)
 
@@ -18,6 +19,7 @@ void Vector()
     // create a vector to store int
     vector<int> vec;
     vector<int> vec2(5);
+    vector<int> vec3(5, 10);       //   {10,10,10,10,10}
     int i;
 
     // display the original size of vec
@@ -337,12 +339,38 @@ void Map(){
 
 }
 
+
+void Unordered_map() {
+
+    cout << "Unordered map" << endl << endl;
+
+    map<char, int> M;
+    unordered_map<char, int> U;
+    String s = "Noragami"
+
+        for (char c : s) {
+            M[c]++;       //O(NlogN)  where N = len(name)
+        }
+
+    for (char c : s) {
+        U[c]++;      //O(N)   where N = len(name)
+    }
+
+
+    //                     Ordered Maps      UnOrdered Maps
+    //  add(key,value)       O(log(N))          O(1)
+    //  erase(key)           O(log(N))          o(1)
+    //  
+
+}
+
+
 int main()
 {
-   //Vector();
-   //Set();
+   Vector();
+   Set();
    Map();
-
+   Unordered_map();
 
    return 0;
 }
